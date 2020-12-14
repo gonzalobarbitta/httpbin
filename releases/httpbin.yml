@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: httpbin
+  namespace: httpbin
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: ./charts/httpbin
+      sourceRef:
+        kind: GitRepository
+        name: httpbin
+        namespace: flux-system
+      interval: 1m
+      
