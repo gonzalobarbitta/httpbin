@@ -11,7 +11,6 @@ spec:
       chart: ./charts/httpbin
       sourceRef:
         kind: GitRepository
-        name: httpbin
-        namespace: flux-system
+        name: flux-system
+        namespace: httpbin
       interval: 1m
-      
